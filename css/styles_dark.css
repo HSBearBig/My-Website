@@ -78,6 +78,10 @@ hr {
     background-color: #212121;
     text-align: center;
     padding-top: 20%;
+    height: -webkit-fill-available;
+    height: -moz-fill-available;
+    height: -moz-available;
+    height: fill-available;
 }
 
 .gif-image {
