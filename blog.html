@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog - John</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles_light.css">
+
+        <script src="https://kit.fontawesome.com/eafbf46871.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+        <script>
+            if (getCookie("cookie") == null) {
+                document.cookie = 'cookie=1';
+            }
+
+            window.onload = loadStyle;
+
+            function loadStyle() {
+                var links = document.getElementsByTagName("link");
+                if (getCookie("cookie") == "1") {
+                    document.querySelector(".display-mode-change-icon").src = "images/dark.png";
+                    links[3].setAttribute("href", "css/styles_light.css");
+                } else if (getCookie("cookie") == "2") { 
+                    document.querySelector(".display-mode-change-icon").src = "images/light.png";
+                    links[3].setAttribute("href", "css/styles_dark.css");
+                }
+                console.log(getCookie("cookie"));
+            }
+    
+            function setStyle() {
+                if (getCookie("cookie") == "1") {
+                    document.cookie = 'cookie=2';
+                    loadStyle();
+                } else if (getCookie("cookie") == "2") {
+                    document.cookie = 'cookie=1';
+                    loadStyle();
+                }
+            }
+    
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="nav-brand">
+                    <img class="icon-brand" src="images/icon.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="ms-auto collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="schedule.html" class="nav-link">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="blog">
+            <div class="blog-title">
+                <h2>Blog</h2>
+            </div>
+            <div class="blog-gallery">
+                <div class="gallery">
+                    <img src="images/taichungimg1.jpg" alt="" class="taichungimg">
+                    <div class="desc">台中公園湖心亭</div>
+                </div>
+                <div class="gallery">
+                    <img src="images/taichungimg2.jpg" alt="" class="taichungimg">
+                    <div class="desc">東海路思義教堂</div>
+                </div>
+                <div class="gallery">
+                    <img src="images/taichungimg3.jpg" alt="" class="taichungimg">
+                    <div class="desc">台中國家歌劇院</div>
+                </div>
+            </div>
+            <div class="blog-content">
+                <h6>台中市─臺灣的中心位置</h6>
+                <p>台中市位於臺灣的中心位置，東經120.4度、北緯24.09度，佔有臺灣163.4平方公里的面積，地處於最重要的樞紐位置，已成為「臺灣之心」；更有便利且綿密的交通路網如中山高速公路、中部第二高速公路、西濱快速道路、中投快速道路等重要幹道，更是南北交通的重要樞紐，終年陽光普照、氣候宜人且年均溫23℃，受評選為「最適合居住的城市」；而位於臺灣中西部，東經120.58度、北緯24.17度，面積2051.4712平方公里的台中縣，北鄰苗栗縣和新竹縣、東鄰宜蘭縣和花蓮縣、南鄰南投縣和彰化縣，並包覆原有的台中市。2010年12月25日五都改制後的縣市合併，將原有3市、4鎮、13鄉的台中縣與台中市合併，讓合併後的大台中地區與台北市、新北市(原台北縣)、高雄市並列臺灣五大直轄市，讓大台中地區幅員更為廣闊，台中市市民每人平均擁有綠地約4.95平方公尺，為五都第一、全國第二，僅次於台東。合併後的台中市行政區域劃分除原有的中區、東區、西區、南區、北區、西屯區、南屯區、北屯區外，另新增了豐原區、大里區、太平區、東勢區、沙鹿區、梧棲區、清水區、大甲區、霧峰區、烏日區、后里區、石岡區、新社區、潭子區、大雅區、神岡區、大肚區、龍井區、大安區、和平區、外埔區等共29區。</p>
+                <h6>台中市的發跡歷史</h6>
+                <p>台中市發跡於西元1705年(清康熙44年)，臺灣北路營參將張國，發現南屯一帶地沃水豐，即派兵從犁頭店到西屯、北屯等台中市駐軍紮營之地點，逐一開始成為戮力耕耘的地方。日治時期，於鐵路、海港與公路的開通與興建，台中市躍昇為中臺灣的政治、經濟與文化中心。西元1945年(民國34年)臺灣光復，經歷任市長努力下，台中市已成為中臺灣區塊發展的龍頭，並與美國康涅克狄克州新海芬市、大韓民國忠清北道忠州市、玻利維亞共和國聖泰克魯斯市等十七個國外地方政府締盟姊妹市。合併前的台中縣歷經平埔族、原住民族及福佬人、客家人的拓墾定居，在鄭氏治台時期境內之鐵砧山與大肚地方為當時日屯墾所拓之地，大安港是漢人移入的重要港口，今日北山面海的大肚區、龍井區一帶，則是原台中縣開發最早的地區，一面溯大肚溪東進，一面沿海岸平原向北方與西方拓墾，並擁向台中盆地；西元1887年臺灣建省，在此設置臺灣縣為臺灣府之首縣，乾隆年間水裡港街(龍井區)、牛罵頭街(清水區)、沙轆街(沙鹿區)、大墩街(現為台中市中區中山路、平等街、公園路及柳川之間)及犁頭店街(現為台中市南屯區南屯里)等主要聚落形成，更進一步發展為卓蘭、東勢、新社、石岡、太平、霧峰等地區，之後國民政府來台將原台中縣轄區實施劃分為台中、彰化、南投三縣並且正式成立新縣；而自2010年12月25日經五都改制，將台中縣與台中市合併。</p>
+                <h6>台中市區的多元商圈及樂活天堂</h6>
+                <p>台中市區具有特色及多樣化的休閒空間、舒適宜人、房價較北高兩市為低的居住環境，使得台中市區擁有完善的生活機能且兼具都會與鄉村特性；可從全世界的第一杯「珍珠奶茶」、融合咖啡與人文精神的「精明一街」、華麗視覺享受的「美術館園道」、流行平價的「天津服務形象商圈」、青年學子流連忘返的「逢甲夜市商圈」等等，就可了解台中市融合了美食、文化與創意的商業型態就此聞名遐邇。自然生態、綠意大地是台中市民的禮物，地方文化的傳承是人們回饋給台中市的深情，台中市區有國立台灣美術館、市立文化中心、國立自然科學博物館、台中忠烈祠、台中孔廟、中山公園、逢甲夜市...等。不論是藝文表演或是名勝古蹟，台中市所打造的現代與人文風情是您值得流連與再次造訪的城市。</p>
+                <h6>台中住宿的時尚概念及旅遊自在行</h6>
+                <p>台中市各飯店業者為方便台中旅遊的旅客，已有多家飯店使用飯店線上即時訂房系統，透過安全的線上交易，您可以輕鬆指定台中飯店、台中旅館入住，到台中旅遊入住台中飯店、台中旅館、台中民宿將讓您的台中旅遊留下豐富且精彩的回憶；高鐵開通後讓民眾輕鬆前往台中旅遊，豐富的旅遊景點是台中吸引人的原因之一，像是后里馬場、福壽山農場、台中港、梧棲觀光漁市、東豐綠色走廊、東勢林場、麗寶樂園、武陵農場、大雪山森林遊樂區、谷關溫泉等等，而聞名中外的大甲鎮瀾宮於每年農曆三月初一由各地信徒組成浩大的進香團，追隨大甲鎮瀾宮的媽祖到嘉義新港奉天宮遶境進香，進行8天7夜的徒步參拜這就是著名的大甲媽祖遶境，民眾可前往大甲鎮瀾宮體驗一下那種虔誠與熱鬧的場面喔！</p>
+            </div>
+        </div>
+        
+        <div class="bottom-info">
+            <div class="name">張宸</div>
+            <div class="email">john6446500@gmail.com</div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="copyright">Copyright © 2021 BearBig All Rights Reserved.</div>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-globe-americas"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <button class="display-mode-change-button" onclick="setStyle()">
+            <img class="display-mode-change-icon" src="images/dark.png" alt="">
+        </button>
+    </body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Schedule - John</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles_light.css">
+        
+        <script src="https://kit.fontawesome.com/eafbf46871.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+       
+        <script>
+            if (getCookie("cookie") == null) {
+                document.cookie = 'cookie=1';
+            }
+
+            window.onload = loadStyle;
+
+            function loadStyle() {
+                var links = document.getElementsByTagName("link");
+                if (getCookie("cookie") == "1") {
+                    document.querySelector(".display-mode-change-icon").src = "images/dark.png";
+                    links[3].setAttribute("href", "css/styles_light.css");
+                } else if (getCookie("cookie") == "2") { 
+                    document.querySelector(".display-mode-change-icon").src = "images/light.png";
+                    links[3].setAttribute("href", "css/styles_dark.css");
+                }
+                console.log(getCookie("cookie"));
+            }
+    
+            function setStyle() {
+                if (getCookie("cookie") == "1") {
+                    document.cookie = 'cookie=2';
+                    loadStyle();
+                } else if (getCookie("cookie") == "2") {
+                    document.cookie = 'cookie=1';
+                    loadStyle();
+                }
+            }
+    
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="nav-brand">
+                    <img class="icon-brand" src="images/icon.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="ms-auto collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="schedule.html" class="nav-link active">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="schedule">
+            <div class="schedule-title">
+                <h2>My Schedule</h1>
+            </div>
+            <div class="schedule-content">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Mon</th>
+                                <th scope="col">Tue</th>
+                                <th scope="col">Wed</th>
+                                <th scope="col">Thu</th>
+                                <th scope="col">Fri</th>
+                                <th scope="col">Sat</th>
+                                <th scope="col">Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">1</div>
+                                        <div class="schedule-time">08:10 ~ 09:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">2</div>
+                                        <div class="schedule-time">09:10 ~ 10:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name">離散數學</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/劉怡芬/" target="_blank">劉怡芬</a>
+                                        </div>
+                                        <div class="schedule-place">資電404</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name">資料結構</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/江庭輝/" target="_blank">江庭輝</a>
+                                        </div>
+                                        <div class="schedule-place">資電B04</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name">通訊與網路概論</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/wchong/" target="_blank">洪維志</a>
+                                        </div>
+                                        <div class="schedule-place">資電104</div>
+                                    </div>
+                                </td>
+                                <td rowspan="3">
+                                    <div>
+                                        <div class="schedule-name">大二英文</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://flc.fcu.edu.tw/teachers-detail/?id=T01119&unit_id=CH05" target="_blank">林芷瑩</a>
+                                        </div>
+                                        <div class="schedule-place">人701</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">3</div>
+                                        <div class="schedule-time">10:10 ~ 11:00</div>
+                                    </div>
+                                </th>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">Web程式設計</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/nlhsueh/" target="_blank">薛念林</a>
+                                        </div>
+                                        <div class="schedule-place">資電248</div>
+                                    </div>
+                                </td>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">物件導向設計實習</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/hsiminc/" target="_blank">陳錫民</a>
+                                        </div>
+                                        <div class="schedule-place">工319</div>
+                                    </div>
+                                </td>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">通訊與網路概論</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/wchong/" target="_blank">洪維志</a>
+                                        </div>
+                                        <div class="schedule-place">資電B04</div>
+                                    </div>
+                                </td>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">離散數學</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/劉怡芬/" target="_blank">劉怡芬</a>
+                                        </div>
+                                        <div class="schedule-place">資電B04</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">4</div>
+                                        <div class="schedule-time">11:10 ~ 12:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">5</div>
+                                        <div class="schedule-time">12:10 ~ 13:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name">數位行銷實務</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://pmp.fcu.edu.tw/teachers-detail/?id=T01274&unit_id=GE01" target="_blank">陳淑慧</a>
+                                        </div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">6</div>
+                                        <div class="schedule-time">13:10 ~ 14:00</div>
+                                    </div>
+                                </th>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">戀愛心理學</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://genedu.fcu.edu.tw/teachers-detail/?id=T08140&unit_id=GE00" target="_blank">陳柏全</a>
+                                        </div>
+                                        <div class="schedule-place">語404</div>
+                                    </div>
+                                </td>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">資料結構</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/江庭輝/" target="_blank">江庭輝</a>
+                                        </div>
+                                        <div class="schedule-place">資電402</div>
+                                    </div>
+                                </td>
+                                <td rowspan="3">
+                                    <div>
+                                        <div class="schedule-name">資料結構實習</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/江庭輝/" target="_blank">江庭輝</a>
+                                        </div>
+                                        <div class="schedule-place">圖213</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">莎士比亞與電影</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://genedu.fcu.edu.tw/teachers-detail/?id=T05243&unit_id=GE00" target="_blank">謝孟成</a>
+                                        </div>
+                                        <div class="schedule-place">人507</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">7</div>
+                                        <div class="schedule-time">14:10 ~ 15:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">8</div>
+                                        <div class="schedule-time">15:10 ~ 16:00</div>
+                                    </div>
+                                </th>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">物件導向設計</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/hsiminc/" target="_blank">陳錫民</a>
+                                        </div>
+                                        <div class="schedule-place">資電108</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name">Web程式設計</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/nlhsueh/" target="_blank">薛念林</a>
+                                        </div>
+                                        <div class="schedule-place">資電B02</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">9</div>
+                                        <div class="schedule-time">16:10 ~ 17:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td rowspan="2">
+                                    <div>
+                                        <div class="schedule-name">Python 程式設計與應用</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/nlhsueh/" target="_blank">薛念林</a>
+                                        </div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <div class="schedule-number">10</div>
+                                        <div class="schedule-time">17:10 ~ 18:00</div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name">班級活動</div>
+                                        <div class="schedule-teacher">
+                                            <a href="https://www.iecs.fcu.edu.tw/teacher/劉明機/" target="_blank">劉明機</a>
+                                        </div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="schedule-name"></div>
+                                        <div class="schedule-place"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="copyright">Copyright © 2021 BearBig All Rights Reserved.</div>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-globe-americas"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        <button class="display-mode-change-button" onclick="setStyle()">
+            <img class="display-mode-change-icon" src="images/dark.png" alt="">
+        </button>
+    </body>
+</html>

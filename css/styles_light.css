@@ -1,0 +1,381 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+body {
+    background-color: #F7F6F2;
+}
+
+h1 {
+    font-family: 'Architects Daughter', cursive;
+    padding: 4%;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2.5rem;
+    padding: 4% 4% 0;
+    margin: 0%;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Comfortaa', cursive;
+    padding: 4% 4% 0;
+}
+
+h4 {
+    font-family: 'cwTeXYen', sans-serif;
+    padding: 1.5%;
+    font-size: 2rem;
+}
+
+h5 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+hr {
+    margin: 2% auto;
+    width: 25%;
+}
+
+/* Nav-Bar */
+.container-fluid {
+    background-color: #4B6587;
+    position: fixed;
+}
+
+.icon-brand {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.icon {
+    margin: 3%;
+    width: 50px;
+}
+
+.collapsing, .show {
+    padding-left: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #b1b1b1;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #F7F6F2;
+}
+
+
+/* index */
+.top-container {
+    background-color: #F0E5CF;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.gif-image {
+    width: 250px;
+}
+
+/* schedule */
+.schedule {
+    padding-top: 20%;
+}
+
+.schedule-content {
+    text-align: center;
+    margin: 5%;
+    background-color: #FFFFFF;
+}
+
+.table {
+    text-align: center;
+    margin: 0px;
+}
+
+table tbody tr th {
+    min-width: 130px;
+    height: 82px;
+    vertical-align: middle;
+}
+
+table tbody tr td {
+    min-width: 190px;
+    vertical-align: middle;
+}
+
+.schedule-place {
+    font-size: 0.8rem;
+}
+
+.schedule-teacher {
+    font-size: 0.9rem;
+}
+
+.schedule-teacher a[target="_blank"]{
+    color: #141E61;
+}
+
+/* blog */
+
+p::first-letter {
+    font-size: x-large;
+}
+
+/* about */
+.about {
+    padding-top: 20%;
+    background-color: #F0E5CF;
+}
+
+.person-icon {
+    text-align: center;
+    margin: 5%;
+    padding: 50px;
+    border-width: 0 0 1px 0 ;
+    border-style: solid;
+    border-color: #b1b1b1;
+    margin-bottom: 30px; 
+}
+
+.person-icon:hover {
+    border-width: 1px;
+}
+
+.about-content {
+    padding: 0 0 30px 0;
+    text-align: center;
+}
+
+.introduction {
+    padding: 3%;
+    background-color: #FAEEE0;
+}
+
+/* Change Theme Button */
+.display-mode-change-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-width: 0px ;
+    border-radius: 100%;
+    background-color: #d1d1d1;
+    padding: 0px;
+}
+
+.display-mode-change-icon {
+    width: 35px;
+}
+
+/* Footer */
+.footer {
+    height: 125px;
+    background-color: #4B6587;
+}
+
+.copyright {
+    text-align: center;
+    line-height: 75px;
+    color: #FFFFFF;
+}
+
+.footer-menu{
+    text-align: center;
+    margin: 0px;
+}
+
+.footer-menu li{
+    list-style: none;
+    float: left;
+    margin-right: 1em;
+}
+
+.fas, .fab {
+    color: #FFFFFF;
+}
+
+@media (min-width: 769px) {
+
+    h1 {
+        font-family: 'Architects Daughter', cursive;
+        padding: 3%;
+        font-size: 4rem;
+    }
+    
+    /* index */
+    .top-container {
+        padding-top: 100px;
+    }
+
+    .gif-image {
+        width: 400px;
+        height: auto;
+    }
+    
+    /* Nav-Bar */
+    .icon-brand {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+    }
+    /* schedule */
+    .schedule {
+        padding-top: 100px;
+    }
+
+    /* about */
+    .about {
+        padding-top: 100px;
+    }
+    
+    .person-icon {
+        padding: 50px;
+        border-width: 0 1px 0 0 ;
+        border-style: solid;
+        border-color: #b1b1b1;
+        float: left;
+        margin: 50px 50px 0px 35%;
+    }
+
+    .about-content {
+        padding: 50px 25% 100px;
+        margin: 50px auto 0px;
+        text-align: left;
+        line-height: 2;
+    }
+
+    .school {
+        text-align: center;
+        height: 300px;
+    }
+    
+    .logo-img {
+        width: 300px;
+    }
+
+    .interesting, .entertainment {
+        padding: 0 0 0 45%;
+        text-align: left;
+    }
+
+    .interesting ul, .entertainment ol {
+        display: inline-block;
+    }
+
+    .interesting ul li, .entertainment ol li {
+        text-align: left;
+        line-height: 2;
+    }
+
+    .movies {
+        vertical-align: top;
+        text-align: center;
+    }
+
+    .dune-img {
+        width: 300px;
+    }
+
+    .fs9-img {
+        width: 300px;
+    }
+
+    /* blog */
+    .blog {
+        padding-top: 100px;
+    }
+    
+    .blog-content {
+        width: 50%;
+        padding: 3% 0;
+        margin: auto;
+    }
+
+    .blog-gallery {
+        height: 250px;
+        margin: 3% 0 0 25%;
+    }
+    
+    .gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        height: 250px;
+    }
+
+    .gallery:hover {
+        border: 1px solid #777;
+    }
+    
+    .gallery img {
+        width: auto;
+        height: 75%;
+    }
+    
+    .desc {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Change Theme Button */
+    .display-mode-change-button {
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        border-width: 0px ;
+        border-radius: 100%;
+        background-color: #d1d1d1;
+        padding: 0px;
+    }
+    
+    .display-mode-change-icon {
+        width: 40px;
+    }
+
+    .bottom-info {
+        position: fixed;
+        text-align: right;
+        bottom: 0px;
+        right: 0px;
+        padding: 0 10px 5px 0;
+    }
+
+    /* Footer */
+    .footer {
+        height: 100px;
+        background-color: #4B6587;
+    }
+
+    .copyright {
+        padding-left: 300px;
+        line-height: 100px;
+        display: inline;
+        color: #FFFFFF;
+    }
+
+    .footer-menu{
+        line-height: 100px;
+        float: right;
+        margin: 0px;
+        padding-right: 300px;
+    }
+
+    .footer-menu li{
+        list-style: none;
+        float: left;
+        margin-right: 1em;
+    }
+
+    .fas, .fab {
+        color: #FFFFFF;
+    }
+}
+
+
